@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ExternalLink, Mail, ArrowRight } from 'lucide-react';
+import Image from 'next/image'; // Importing Next.js Image component for optimization
 
 export default function Portfolio() {
   const scrollToSection = (id: string) => {
@@ -16,7 +17,6 @@ export default function Portfolio() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-lg border-b border-zinc-800">
         <div className="max-w-5xl mx-auto px-8 py-5 flex justify-between items-center">
           <div className="text-2xl font-bold tracking-tight">Suleiman.</div>
-          
           <div className="flex gap-8 text-sm font-medium">
             <button onClick={() => scrollToSection('about')} className="hover:text-blue-400 transition">About</button>
             <button onClick={() => scrollToSection('projects')} className="hover:text-blue-400 transition">Projects</button>
@@ -77,11 +77,11 @@ export default function Portfolio() {
           <h2 className="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
           
           <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
-            <div className="flex flex-col md:flex-row justify-between gap-8 mb-10">
+            <div className="flex flex-col md:flex-row justify-between gap-8">
               <div className="flex-1">
                 <h3 className="text-3xl font-bold mb-3">Web3 Wallet Sender</h3>
                 <p className="text-blue-400 mb-6">Next.js • Wagmi • RainbowKit • Tailwind</p>
-                <p className="text-zinc-400 leading-relaxed">
+                <p className="text-zinc-400 leading-relaxed mb-6">
                   A clean Web3 dApp that lets users connect their MetaMask wallet, view real-time Sepolia balance, 
                   claim free test ETH, send custom amounts of test ETH, and view transaction history.
                 </p>
@@ -96,41 +96,14 @@ export default function Portfolio() {
                 </a>
               </div>
             </div>
-
-            {/* Clickable Image Gallery */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <a href="https://instagram.com/codexa42077" target="_blank" className="block">
-                <img 
-                  src="/projects/wallet-sender-1.jpg" 
-                  alt="Screenshot 1"
-                  className="w-full rounded-2xl border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105"
-                />
-              </a>
-              <a href="https://tiktok.com/@codexa8" target="_blank" className="block">
-                <img 
-                  src="/projects/wallet-sender-2.png" 
-                  alt="Screenshot 2"
-                  className="w-full rounded-2xl border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105"
-                />
-              </a>
-              <a href="https://facebook.com/codexatechguy" target="_blank" className="block">
-                <img 
-                  src="/projects/wallet-sender-3.jpg" 
-                  alt="Screenshot 3"
-                  className="w-full rounded-2xl border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105"
-                />
-              </a>
-              <a href="https://wa.me/2348168236654" target="_blank" className="block">
-                <img 
-                  src="/projects/wallet-sender-4.png" 
-                  alt="Screenshot 4"
-                  className="w-full rounded-2xl border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105"
-                />
-              </a>
-            </div>
+            {/* NOTICE: I removed the image grid from here. 
+              Usually, you would put screenshots of the actual APP here, 
+              not your social media icons! 
+            */}
           </div>
         </div>
       </section>
+
       {/* Contact */}
       <section id="contact" className="py-24 bg-zinc-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -147,57 +120,33 @@ export default function Portfolio() {
         </div>
       </section>
 
-            {/* Footer with Clickable Social Links */}
+      {/* Footer with Clickable Social Images */}
       <footer className="py-16 border-t border-zinc-800 bg-zinc-950">
-        <div className="max-w-5xl mx-auto px-6 flex flex-col items-center gap-10">
-          <div className="flex gap-10 text-4xl">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col items-center gap-8">
+          <div className="flex gap-8 items-center">
             {/* WhatsApp */}
-            <a 
-              href="https://wa.me/2348168236654" 
-              target="_blank" 
-              className="hover:scale-110 transition" 
-              title="WhatsApp"
-            >
-              💬
+            <a href="https://wa.me/2348168236654" target="_blank" className="hover:scale-110 transition">
+              <img src="/projects/wallet-sender-4.png" alt="WhatsApp" className="w-8 h-8 rounded-lg" />
             </a>
 
             {/* Facebook */}
-            <a 
-              href="https://facebook.com/codexatechguy" 
-              target="_blank" 
-              className="hover:scale-110 transition" 
-              title="Facebook"
-            >
-              📘
+            <a href="https://facebook.com/codexatechguy" target="_blank" className="hover:scale-110 transition">
+              <img src="/projects/wallet-sender-3.jpg" alt="Facebook" className="w-8 h-8 rounded-lg" />
             </a>
 
             {/* Instagram */}
-            <a 
-              href="https://instagram.com/codexa42077" 
-              target="_blank" 
-              className="hover:scale-110 transition" 
-              title="Instagram"
-            >
-              📷
+            <a href="https://instagram.com/codexa42077" target="_blank" className="hover:scale-110 transition">
+              <img src="/projects/wallet-sender-1.jpg" alt="Instagram" className="w-8 h-8 rounded-lg" />
             </a>
 
             {/* TikTok */}
-            <a 
-              href="https://tiktok.com/@codexa8" 
-              target="_blank" 
-              className="hover:scale-110 transition" 
-              title="TikTok"
-            >
-              🎵
+            <a href="https://tiktok.com/@codexa8" target="_blank" className="hover:scale-110 transition">
+              <img src="/projects/wallet-sender-2.png" alt="TikTok" className="w-8 h-8 rounded-lg" />
             </a>
 
-            {/* Gmail */}
-            <a 
-              href="mailto:sulemansuleiman499@gmail.com" 
-              className="hover:scale-110 transition" 
-              title="Gmail"
-            >
-              ✉️
+            {/* Gmail - Using the Lucide Icon to keep it professional */}
+            <a href="mailto:sulemansuleiman499@gmail.com" className="hover:scale-110 transition text-zinc-400 hover:text-white">
+              <Mail size={28} />
             </a>
           </div>
 
