@@ -140,23 +140,56 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Footer with Social Media Links */}
+            {/* Footer with Clickable Social Links */}
       <footer className="py-16 border-t border-zinc-800 bg-zinc-950">
-        <div className="max-w-5xl mx-auto px-6 flex flex-col items-center gap-8">
-          <div className="flex gap-8 text-3xl">
-            <a href="https://wa.me/2348168236654" target="_blank" className="hover:text-green-400 transition" title="WhatsApp">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col items-center gap-10">
+          <div className="flex gap-10 text-4xl">
+            {/* WhatsApp */}
+            <a 
+              href="https://wa.me/2348168236654" 
+              target="_blank" 
+              className="hover:scale-110 transition" 
+              title="WhatsApp"
+            >
               💬
             </a>
-            <a href="https://facebook.com/codexatechguy" target="_blank" className="hover:text-blue-600 transition" title="Facebook">
+
+            {/* Facebook */}
+            <a 
+              href="https://facebook.com/codexatechguy" 
+              target="_blank" 
+              className="hover:scale-110 transition" 
+              title="Facebook"
+            >
               📘
             </a>
-            <a href="https://instagram.com/codex42077" target="_blank" className="hover:text-pink-500 transition" title="Instagram">
+
+            {/* Instagram */}
+            <a 
+              href="https://instagram.com/codexa42077" 
+              target="_blank" 
+              className="hover:scale-110 transition" 
+              title="Instagram"
+            >
               📷
             </a>
-            <a href="https://tiktok.com/@codex8" target="_blank" className="hover:text-black transition" title="TikTok">
+
+            {/* TikTok */}
+            <a 
+              href="https://tiktok.com/@codexa8" 
+              target="_blank" 
+              className="hover:scale-110 transition" 
+              title="TikTok"
+            >
               🎵
             </a>
-            <a href="mailto:sulemansuleiman499@gmail.com" className="hover:text-red-400 transition" title="Gmail">
+
+            {/* Gmail */}
+            <a 
+              href="mailto:sulemansuleiman499@gmail.com" 
+              className="hover:scale-110 transition" 
+              title="Gmail"
+            >
               ✉️
             </a>
           </div>
