@@ -71,7 +71,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-           {/* Projects Section */}
+             {/* Projects Section */}
       <section id="projects" className="py-24">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
@@ -97,33 +97,32 @@ export default function Portfolio() {
               </div>
             </div>
 
-                        {/* Image Gallery */}
+            {/* Clean 4 Screenshots Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <img 
-                src="/projects/wallet-sender-1.jpg" 
-                alt="Web3 Wallet Sender Screenshot 1"
-                className="rounded-2xl border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105 aspect-video object-cover"
+                src="/projects/wallet-sender-1.png" 
+                alt="Screenshot 1"
+                className="rounded-2xl border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105"
               />
               <img 
                 src="/projects/wallet-sender-2.png" 
-                alt="Web3 Wallet Sender Screenshot 2"
-                className="rounded-2xl border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105 aspect-video object-cover"
+                alt="Screenshot 2"
+                className="rounded-2xl border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105"
               />
               <img 
-                src="/projects/wallet-sender-3.jpg" 
-                alt="Web3 Wallet Sender Screenshot 3"
-                className="rounded-2xl border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105 aspect-video object-cover"
+                src="/projects/wallet-sender-3.png" 
+                alt="Screenshot 3"
+                className="rounded-2xl border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105"
               />
               <img 
                 src="/projects/wallet-sender-4.png" 
-                alt="Web3 Wallet Sender Screenshot 4"
-                className="rounded-2xl border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105 aspect-video object-cover"
+                alt="Screenshot 4"
+                className="rounded-2xl border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105"
               />
             </div>
           </div>
         </div>
       </section>
-
       {/* Contact */}
       <section id="contact" className="py-24 bg-zinc-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
