@@ -71,35 +71,71 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects Section */}
+           {/* Projects Section */}
       <section id="projects" className="py-24">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
           
-          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
-            <div className="flex flex-col md:flex-row justify-between gap-8">
-              <div className="flex-1">
-                <h3 className="text-3xl font-bold mb-3">Web3 Wallet Sender</h3>
-                <p className="text-blue-400 mb-6">Next.js • Wagmi • RainbowKit • Tailwind</p>
-                <p className="text-zinc-400 leading-relaxed mb-6">
-                  A clean Web3 dApp that lets users connect their MetaMask wallet, view real-time Sepolia balance, 
-                  claim free test ETH, send custom amounts of test ETH, and view transaction history.
-                </p>
-              </div>
-              <div>
+          <div className="grid md:grid-cols-2 gap-8">
+            
+            {/* Wallet Sender */}
+            <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:border-violet-500 transition group">
+              <div className="h-2 w-12 bg-violet-500 rounded mb-6"></div>
+              <h3 className="text-2xl font-bold mb-3">Wallet Sender</h3>
+              <p className="text-violet-400 mb-6 text-sm">Next.js • Wagmi • RainbowKit • Sepolia</p>
+              
+              <p className="text-zinc-400 leading-relaxed mb-8">
+                A clean and responsive Web3 dApp that allows users to connect MetaMask, view real-time ETH balance, 
+                send custom amounts of test ETH, and view transaction history.
+              </p>
+
+              <div className="flex gap-3">
                 <a 
-                  href="https://suleiman-web3-app.vercel.app" 
+                  href="https://suleiman-web3-5uq9psn4o-sulemansuleiman499-creates-projects.vercel.app/" 
                   target="_blank"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-2xl transition"
+                  className="flex-1 py-3 bg-violet-600 hover:bg-violet-700 text-center rounded-2xl font-medium transition"
                 >
-                  Live Demo <ExternalLink size={18} />
+                  Live Demo
+                </a>
+                <a 
+                  href="https://github.com/sulemansuleiman499/wallet-sender" 
+                  target="_blank"
+                  className="flex-1 py-3 border border-zinc-700 hover:bg-zinc-800 text-center rounded-2xl font-medium transition"
+                >
+                  GitHub
                 </a>
               </div>
             </div>
-            {/* NOTICE: I removed the image grid from here. 
-              Usually, you would put screenshots of the actual APP here, 
-              not your social media icons! 
-            */}
+
+            {/* Token Claim Portal */}
+            <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:border-fuchsia-500 transition group">
+              <div className="h-2 w-12 bg-fuchsia-500 rounded mb-6"></div>
+              <h3 className="text-2xl font-bold mb-3">Token Claim Portal</h3>
+              <p className="text-fuchsia-400 mb-6 text-sm">Next.js • Wagmi • RainbowKit • Sepolia</p>
+              
+              <p className="text-zinc-400 leading-relaxed mb-8">
+                A sleek token claiming interface where users can connect their wallet, claim free TEST tokens, 
+                view real-time TEST token balance, and see claim history.
+              </p>
+
+              <div className="flex gap-3">
+                <a 
+                  href="https://suleiman-web3-5uq9psn4o-sulemansuleiman499-creates-projects.vercel.app/claim" 
+                  target="_blank"
+                  className="flex-1 py-3 bg-fuchsia-600 hover:bg-fuchsia-700 text-center rounded-2xl font-medium transition"
+                >
+                  Live Demo
+                </a>
+                <a 
+                  href="https://github.com/sulemansuleiman499/token-claim-portal" 
+                  target="_blank"
+                  className="flex-1 py-3 border border-zinc-700 hover:bg-zinc-800 text-center rounded-2xl font-medium transition"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
